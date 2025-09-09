@@ -15,31 +15,30 @@ const Header = () => {
     { label: "ABOUT US", href: "#about" },
     { label: "LOCATION", href: "#location" },
     { label: "CONTACT", href: "#contact" },
+    { label: "LOGIN", href: "/login" },
   ];
 
   return (
     <header className="fixed top-0 w-full bg-background/95 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-4">
-            {/* <div className="relative w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-glow overflow-hidden border-2 border-primary/20 hover:scale-105 transition-transform duration-300">
-              <img 
-                src={kcLogo} 
-                alt="KC Logo" 
-                className="w-12 h-12 object-contain filter brightness-0 invert"
-              />
-            </div> */}
-            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
-                <span className="font-bold text-2xl text-primary-foreground italic">KC</span>
-                {/* <img src={kcLogo} alt="KC Logo" className="w-12 h-12 object-contain filter" /> */}
+          <a href="#home">
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center">
+                <span className="font-bold text-2xl text-primary-foreground italic">
+                  KC
+                </span>
               </div>
-            <div>
-              <h1 className="text-xl font-black text-foreground italic bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                Khodiyar Cutpieces
-              </h1>
-              <p className="text-xs text-muted-foreground font-semibold tracking-wide">Premium Fabric Shop</p>
+              <div>
+                <h1 className="text-xl font-black text-foreground italic bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
+                  Khodiyar Cutpieces
+                </h1>
+                <p className="text-xs text-muted-foreground font-semibold tracking-wide">
+                  Premium Fabric Shop
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
