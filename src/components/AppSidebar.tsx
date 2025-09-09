@@ -9,6 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarRail,
+  useSidebar,
 } from "./ui/sidebar";
 import { LayoutDashboard, ReceiptIndianRupee, User } from "lucide-react";
 import { NavLink } from "react-router-dom";
@@ -25,12 +26,13 @@ const menu = [
 ];
 
 export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
+  const { openMobile, setOpenMobile } = useSidebar()
   return (
     <Sidebar {...props}>
       <SidebarHeader>
         <VersionSwitcher />
-        <hr />
       </SidebarHeader>
+      <hr className="mb-2" />
 
       <SidebarContent>
         <SidebarGroup>
@@ -50,6 +52,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
                         }`
                     }
                     aria-current={undefined}
+                    onClick={()=> setOpenMobile(!openMobile)}
                   >
                     <span className="w-5 h-5 flex items-center justify-center">
                       {item.icon}
